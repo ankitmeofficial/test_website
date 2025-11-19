@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title><%= article.title %> — Vulnerable News</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header" style="margin-bottom:18px;">
+        <a class="brand" href="/">
+          <div class="logo">N</div>
+          <div>
+            <div class="title">Vulnerable News</div>
+            <div class="subtitle">No login — public news (for testing)</div>
+          </div>
+        </a>
+
+        <div class="controls">
+          <a href="/" style="text-decoration:none; color:#2563eb; font-weight:600;">← Back to list</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="article">
+            <img src="https://picsum.photos/seed/<%= article.id %>/1000/450"
+     alt="article image"
+     style="width:100%; border-radius:12px; margin-bottom:16px;">
+
+          <h1><%= article.title %></h1>
+          <div class="meta">Article ID: <strong><%= article.id %></strong></div>
+          <p><%= article.body %></p>
+        </section>
+
+        <div class="footer">
+          Vulnerable News — for local testing only. Do not expose to Internet.
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
