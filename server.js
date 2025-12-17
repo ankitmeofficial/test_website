@@ -12,7 +12,7 @@ app.use((req, res, next) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "x-website-key": "TrJTkBIpvFGV1ANS3YRqIsaJ"
+      "x-website-key": "zdoXQZuza1U49zidVM9zEW9f"
     },
     body: JSON.stringify({
       ip: req.ip || req.connection.remoteAddress || req.headers['x-forwarded-for']?.split(',')[0] || 'unknown',
