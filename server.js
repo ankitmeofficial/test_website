@@ -62,10 +62,13 @@ app.get("/news/:id", async (req, res) => {
   }
 });
 
-// Start server
-app.listen(4000, () =>
-  console.log("Vulnerable News website running at http://localhost:4000")
-);
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+  console.log(`Vulnerable News website running on port ${PORT}`);
+});
+
 
 
 
